@@ -41,16 +41,9 @@ y = final_data.loc[:, 'Survived']
 knn = KNeighborsClassifier(n_neighbors=10)
 knn.fit(X,y)
 
-print(knn.fit(X,y))
-
 titanic_prediction = final_test_data.copy()
-print(titanic_prediction.dtypes)
 knn.predict(titanic_prediction)
-titanic_prediction['Survived'] = knn.predict(titanic_prediction)
 print("Predicting some stuff...")
+titanic_prediction['Survived'] = knn.predict(titanic_prediction)
 print("Here is the output")
-print(knn.predict(final_test_data))
-print(titanic_prediction)
-test_prediction = titanic_prediction ['Survived']
-print(titanic_prediction.dtypes)
 titanic_prediction.to_csv('hello.csv', header=True)
