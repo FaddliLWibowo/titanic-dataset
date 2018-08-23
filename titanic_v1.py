@@ -4,7 +4,6 @@ from sklearn.neighbors import KNeighborsClassifier
 
 data = pd.read_csv("train.csv", index_col=0)
 test_data = pd.read_csv("test.csv",index_col=0)
-
 print("Cleaning Data...")
 
 clean_data = data.drop(['Name','Ticket','Cabin'], axis=1)
