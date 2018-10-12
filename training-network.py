@@ -65,4 +65,4 @@ plt.legend(['train', 'validation'], loc='upper left')
 plt.show()890
 
 
-#model.save("alt_model")
+model.save("alt_model")
